@@ -1,14 +1,10 @@
 # Google Summer of Code 2020 Final Report
 
----
-
 **Student:** Hashir Sarwar
 **Organization**: Zulip
 **Mentor**: Hemanth V. Alluri
 
 ## Overview
-
----
 
 My GSoC project was focused on extending features, fixing high priority bugs, and improving the overall experience of Zulip. This post serves as my final submission to the project.
 
@@ -19,8 +15,6 @@ Under this project there are three important areas covered:
 - Inline previews and markdown support
 
 ## Description
-
----
 
 Following is the chronological detail of the work done during my GSoC period.
 
@@ -85,7 +79,7 @@ Browsers display a "mixed content" warning when initial HTML is loaded over a se
 **Related PR**
 Use thumbor for inline URL preview images [#16037](https://github.com/zulip/zulip/pull/16037)
 
-### Added support for new markdown syntax ![title](url)
+### Added support for new markdown syntax `![title](url)`
 
 Previously, Zulip didn't support the `![title](url)` syntax that allows sending images without any text link. I have adjusted the Zulip's existing model to make use of this markdown syntax and tweaked inline images' CSS properties accordingly. The added advantage is that this would give more control to the user for positioning of previews within a message.
 **Related PR**
@@ -111,8 +105,6 @@ I had started this project before my official GSoC period and continued working 
 Store server feature level in Redux [#4079](https://github.com/zulip/zulip-mobile/pull/4079)
 
 ## Final words
-
----
 
 It has been an honor to be a part of one of the leading open source communities. My next plan is to keep working on my open PRs as per the directions of the reviewers and get them merged. Furthermore, I will keep contributing within my specialized domain of the project to stay an active part of this amazing open source community.
 
