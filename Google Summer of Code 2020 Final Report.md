@@ -1,7 +1,9 @@
 # Google Summer of Code 2020 Final Report
 
 **Student:** Hashir Sarwar
+
 **Organization**: Zulip
+
 **Mentor**: Hemanth V. Alluri
 
 ## Overview
@@ -21,6 +23,7 @@ Following is the chronological detail of the work done during my GSoC period.
 ### Added support for iOS notification count
 
 Previously, Zulip server didn't support to send notification count to iOS devices. I have worked to add this support along with automated testing.
+
 **Related PR:**
 Add support for setting counts in iOS push notifications [#15179](https://github.com/zulip/zulip/pull/15179)
 
@@ -29,6 +32,7 @@ Add support for setting counts in iOS push notifications [#15179](https://github
 This is one of the most important features that I have worked on during my GSoC period. End-to-end encryption is a vital security enhancement especially for team chat software like Zulip.
 
 I have used the AES-GCM algorithm to encrypt the data before sending it from the server to the mobile devices.
+
 **Related PRs**:
 Store tokens locally even when bouncer is used [#15261](https://github.com/zulip/zulip/pull/15261) (Preparatory work)
 Add end-to-end encryption for push notifications [#15229](https://github.com/zulip/zulip/pull/15229) (Actual work)
@@ -38,6 +42,7 @@ Add end-to-end encryption for push notifications [#15229](https://github.com/zul
 The size of the payload sent from the Zulip server to the browsers and mobile apps has been significantly reduced. To be more specific, this reduced network bandwidth from 1.3MB compressed and 10.4MB total to 0.92MB compressed and 8.8MB total.
 
 This has been made possible by not sending avatar URLs of long term idle users from the server. This field is not compressible, thus it eats up a lot of bandwidth. If we ever require an avatar URL of any long term idle user, we'll compute it from the frontend/mobile app.
+
 **Related PRs:**
 Avoid sending avatar URLs of long term idle users to clients [#15359](https://github.com/zulip/zulip/pull/15359)
 Add user_avatar_url_field_optional support to the web client [#15546](https://github.com/zulip/zulip/pull/15546)
@@ -60,12 +65,14 @@ Many of the cases for deactivated users were left unhandled causing unexpected b
 
 I have worked to handle all of these cases and add unit tests for each case.
 ![image](https://user-images.githubusercontent.com/45683359/88746327-bcf07a00-d165-11ea-9afe-5c76de380be1.png)
+
 **Related PR:**
 Fix behaviour of PM list with deactivated user [#13795](https://github.com/zulip/zulip/pull/13795)
 
 ### Fixed an unexpected typeahead behavior
 
 Typeahead in the navbar didn't close unless an option is selected from the typeahead itself. The code causing this bug was investigated and this was addressed in my PR.
+
 **Related PR**
 Fix binding of event handler to blur event [#15945](https://github.com/zulip/zulip/pull/15945)
 
@@ -82,6 +89,7 @@ Use thumbor for inline URL preview images [#16037](https://github.com/zulip/zuli
 ### Added support for new markdown syntax `![title](url)`
 
 Previously, Zulip didn't support the `![title](url)` syntax that allows sending images without any text link. I have adjusted the Zulip's existing model to make use of this markdown syntax and tweaked inline images' CSS properties accordingly. The added advantage is that this would give more control to the user for positioning of previews within a message.
+
 **Related PR**
 markdown: Add support for new syntax `![title](url)`. [#16117](https://github.com/zulip/zulip/pull/16117)
 
@@ -101,6 +109,7 @@ The purpose of `feature_level` is to provide a way for (non-webapp) clients, lik
 - doesn't lead to a growing bag of named feature flags which the server has to go on sending forever.
 
 I had started this project before my official GSoC period and continued working on this parallel to other projects.
+
 **Related PR**
 Store server feature level in Redux [#4079](https://github.com/zulip/zulip-mobile/pull/4079)
 
