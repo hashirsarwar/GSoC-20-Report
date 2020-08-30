@@ -37,7 +37,7 @@ Add end-to-end encryption for push notifications [#15229](https://github.com/zul
 
 ### Reduced Zulip's initial loading time
 
-The size of the payload sent from the Zulip server to the browsers and mobile apps has been significantly reduced. To be more specific, this reduced network bandwidth from 1.3MB compressed and 10.4MB total to 0.92MB compressed and 8.8MB total.
+The size of the payload sent from the Zulip server to the browsers and mobile apps has been significantly reduced. To be more specific, the network bandwidth is reduced from 1.3MB compressed and 10.4MB total to 0.92MB compressed and 8.8MB total.
 
 This has been made possible by not sending avatar URLs of long term idle users from the server. This field is not compressible, thus it eats up a lot of bandwidth. If we ever require an avatar URL of any long term idle user, we'll compute it from the frontend/mobile app.
 
@@ -62,6 +62,7 @@ Many of the cases for deactivated users were left unhandled causing unexpected b
 - Display a message that the user you are trying to interact is deactivated.
 
 I have worked to handle all of these cases and add unit tests for each case.
+
 ![image](https://user-images.githubusercontent.com/45683359/88746327-bcf07a00-d165-11ea-9afe-5c76de380be1.png)
 
 *Related PR*  
