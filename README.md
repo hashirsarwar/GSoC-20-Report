@@ -114,6 +114,6 @@ Store server feature level in Redux [#4079](https://github.com/zulip/zulip-mobil
 
 ## Final words
 
-It has been an honor to be a part of one of the leading open source communities. My next plan is to keep working on my open PRs as per the directions of the reviewers and get them merged. Furthermore, I will keep contributing within my specialized domain of the project to stay an active part of this amazing open source community.
+It has been an honor to be a part of one of the leading open source communities. My next plan is to continue working on my open PRs as per the directions of the reviewers and get them merged. Furthermore, I will keep contributing within my specialized domain of the project to stay an active part of this amazing open source community.
 
 Lastly, huge thanks to Google and Zulip for providing the opportunity and my mentor Hemanth for guiding me throughout the program.
