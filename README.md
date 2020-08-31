@@ -91,11 +91,11 @@ Zulip didn't support the `![title](url)` markdown syntax for images. I have adju
 
 *Before*
 
-![image](https://ibb.co/ZGNBXbs)
+![image](https://www.linkpicture.com/q/image-1_5.png)
 
 *After*
 
-![image](https://ibb.co/Sf6j5z6)
+![image](https://linkpicture.com/q/image_17.png)
 
 *Related PR*  
 markdown: Add support for new syntax `![title](url)`. [#16117](https://github.com/zulip/zulip/pull/16117)
