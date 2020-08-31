@@ -70,7 +70,7 @@ Fix behaviour of PM list with deactivated user [#13795](https://github.com/zulip
 
 ### Fixed an unexpected typeahead behavior
 
-Typeahead in the navbar didn't close unless an option is selected from the typeahead itself. The code causing this bug was investigated addressed in my PR.
+Typeahead in the navbar didn't close unless an option was selected from the typeahead itself. The code causing this bug was investigated addressed in my PR.
 
 *Related PR*  
 Fix binding of event handler to blur event [#15945](https://github.com/zulip/zulip/pull/15945)
