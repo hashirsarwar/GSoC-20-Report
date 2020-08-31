@@ -87,7 +87,15 @@ Use thumbor for inline URL preview images [#16037](https://github.com/zulip/zuli
 
 ### Added support for new markdown syntax `![title](url)`
 
-Previously, Zulip didn't support the `![title](url)` markdown syntax. I have adjusted the Zulip's existing model to make use of this markdown syntax and tweaked inline images' CSS properties accordingly. This would allow the users to send images without any text link. The added advantage is that this would give more control to the user for positioning of previews within a message.
+Zulip didn't support the `![title](url)` markdown syntax for images. I have adjusted the Zulip's existing model to make use of this markdown syntax and tweaked inline images' CSS properties accordingly. This would allow the users to send images without any text link. This syntax has also been made default for sending images as attachments or pasting images from the system's clipboard (`[title](url)` syntax was used previously for this purpose). The added advantage is that this would give more control to the user for positioning of previews within a message.
+
+*Before*
+
+![image](https://chat.zulip.org/user_uploads/2/26/O5rpPJW7xcBy_lcFjJ_Sj_2X/image.png)
+
+*After*
+
+![image](https://chat.zulip.org/user_uploads/2/5e/4xbf8AaQRSqQmipdVjE1ScX3/image.png)
 
 *Related PR*  
 markdown: Add support for new syntax `![title](url)`. [#16117](https://github.com/zulip/zulip/pull/16117)
