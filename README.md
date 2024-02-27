@@ -1,12 +1,12 @@
 # Google Summer of Code 2020 Final Report
 
-**Student:** Hashir Sarwar  
+**Developer:** Hashir Sarwar  
 **Organization**: Zulip  
 **Mentor**: Hemanth V. Alluri
 
 ## Overview
 
-My GSoC project was focused on extending features, fixing high priority bugs, and improving the overall experience of Zulip. This post serves as my final submission to the project.
+My GSoC project was focused on extending features, fixing high-priority bugs, and improving the overall experience of Zulip. This post serves as my final submission to the project.
 
 Under this project there are three important areas covered:
 
@@ -27,7 +27,7 @@ Add support for setting counts in iOS push notifications [#15179](https://github
 
 ### Added end-to-end encryption for push notifications
 
-This is one of the most important features that I have worked on during my GSoC period. End-to-end encryption is a vital security enhancement especially for team chat software like Zulip.
+This is one of the most important features that I have worked on during my GSoC period. End-to-end encryption is a vital security enhancement, especially for team chat software like Zulip.
 
 I have used the AES-GCM algorithm to encrypt the data before sending it from the server to the mobile devices.
 
@@ -39,10 +39,10 @@ Add end-to-end encryption for push notifications [#15229](https://github.com/zul
 
 The size of the payload sent from the Zulip server to the browsers and mobile apps has been significantly reduced. To be more specific, the network bandwidth is reduced from 1.3MB compressed and 10.4MB total to 0.92MB compressed and 8.8MB total.
 
-This has been made possible by not sending avatar URLs of long term idle users from the server. This field is not compressible, thus eats up a lot of bandwidth. If we ever need the avatar URL of a long term idle user, we'll compute it from the frontend/mobile app.
+This has been made possible by not sending avatar URLs of long-term idle users from the server. This field is not compressible and thus eats up a lot of bandwidth. If we ever need the avatar URL of a long-term idle user, we'll compute it from the frontend/mobile app.
 
 *Related PRs*  
-Avoid sending avatar URLs of long term idle users to clients [#15359](https://github.com/zulip/zulip/pull/15359)  
+Avoid sending avatar URLs of long-term idle users to clients [#15359](https://github.com/zulip/zulip/pull/15359)  
 Add user_avatar_url_field_optional support to the web client [#15546](https://github.com/zulip/zulip/pull/15546)
 
 ### Investigated the slow performance on Chrome mobile browser
@@ -57,16 +57,16 @@ I have not opened any PR to fix this since it mostly involved refactoring HTML/C
 
 Many of the cases for deactivated users were left unhandled causing unexpected behaviors when a user interacts with deactivated users. Based on the discussions with other members of the community, the following cases have been worked on:
 
-- Avoid the PM list to collapse mysteriously when a deactivated user is clicked on.
+- Avoid the PM list from collapsing mysteriously when a deactivated user is clicked on.
 - Allow deactivated users' pills in the compose box but distinguish them visually from other pills.
-- Display a message that the user you are trying to interact is deactivated.
+- Display a message that the user you are trying to interact with is deactivated.
 
-The image below demonstrates the frontend changes made when a user interacts with a deactivated user.
+The image below demonstrates the front-end changes made when a user interacts with a deactivated user.
 
 ![image](https://user-images.githubusercontent.com/45683359/88746327-bcf07a00-d165-11ea-9afe-5c76de380be1.png)
 
 *Related PR*  
-Fix behaviour of PM list with deactivated user [#13795](https://github.com/zulip/zulip/pull/13795)
+Fix the behaviour of PM list with deactivated user [#13795](https://github.com/zulip/zulip/pull/13795)
 
 ### Fixed an unexpected typeahead behavior
 
@@ -92,9 +92,9 @@ Zulip didn't support the `![title](url)` markdown syntax for images. I have adju
 *Related PR*  
 markdown: Add support for new syntax `![title](url)`. [#16117](https://github.com/zulip/zulip/pull/16117)
 
-### Add option to remove preview for a specific URL in a message
+### Add an option to remove the preview for a specific URL in a message
 
-The idea was to provide an option to the user to remove any undesired URL preview from a sent message. One of the Zulip's maintainers has worked on this previously but his PR was stale and outdated. I have reworked on this with the required updates.
+The idea was to provide an option to the user to remove any undesired URL preview from a sent message. One of Zulip's maintainers has worked on this previously but his PR was stale and outdated. I have reworked this with the required updates.
 
 *Related PRs*  
 Remove preview for a specific URL in a message [#16231](https://github.com/zulip/zulip/pull/16231)
@@ -114,6 +114,6 @@ Store server feature level in Redux [#4079](https://github.com/zulip/zulip-mobil
 
 ## Final words
 
-It has been an honor to be a part of one of the leading open source communities. My next plan is to continue working on my open PRs as per the directions of the reviewers and get them merged. Furthermore, I will keep contributing to the project to stay an active part of this amazing open source community.
+It has been an honour to be a part of one of the leading open-source communities. My next plan is to continue working on my open PRs as per the directions of the reviewers and get them merged. Furthermore, I will keep contributing to the project to stay an active part of this amazing open-source community.
 
-Lastly, huge thanks to Google and Zulip for providing the opportunity and my mentor Hemanth for guiding me throughout the program.
+Lastly, huge thanks to Google and Zulip for providing the opportunity and to my mentor Hemanth for guiding me throughout the program.
